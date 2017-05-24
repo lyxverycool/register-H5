@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style">
+	<meta content="telephone=no" name="format-detection">
+	<meta content="email=no" name="format-detection">
+	<meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true">
+	<title>i人事企业注册</title>
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+<div class="container flex flex-pack-center flex-align-center">
+    <input id="path" type="hidden" value="<%=path%>"/>
+    <div class="wrap">
+        <div class="common-dialog text-center" id="success-html">
+            <div class="dialogImg"></div>
+            <div class="text-1">注册成功</div>
+            <div class="text-2">请在PC端登录</div>
+        </div>
+        <div id="login-html">
+            <div class="logo text-center">
+                <div class="logo-img"></div>
+            </div>
+            <div class="title text-center">
+                企业注册
+            </div>
+            <form name="registerForm" class="form">
+                <div class="content flex flex-align-center">
+                    <div class="list-pic flex flex-align-center">
+                        <div class="icon1 icon">
+                        </div>
+                    </div>
+                    <input class="name" type="text" name="username" id="username" placeholder="公司名称"/>
+                </div>
+                <div class="content flex flex-align-center">
+                    <div class="list-pic flex flex-align-center">
+                        <div class="icon2 icon">
+                        </div>
+                    </div>
+                    <input class="tel" maxlength="11" type="tel" name="mobileNo" id="mobileNo" placeholder="登录手机号"/>
+                </div>
+                <div class="content flex flex-align-center">
+                    <div class="list-pic flex flex-align-center">
+                        <div class="icon3 icon">
+                        </div>
+                    </div>
+                    <input class="number" type="text" name="verifyCode" id="verifyCode" placeholder="验证码"/>
+
+                    <button type="button" class="gain text-center" id="sendVerifyCode">
+                        获取验证码
+                    </button>
+                </div>
+                <div class="content flex flex-align-center">
+                    <div class="list-pic flex flex-align-center">
+                        <div class="icon4 icon">
+                        </div>
+                    </div>
+                    <input class="name" type="password" name="password" id="password" placeholder="密码(6-16字母、数字、无空格)"/>
+                </div>
+                <div class="content flex flex-align-center">
+                    <div class="list-pic flex flex-align-center">
+                        <div class="icon5 icon">
+                        </div>
+                    </div>
+                    <input class="name" type="password" name="confirmPassword" id="confirmPassword" placeholder="确认密码"/>
+                </div>
+                <div class="content flex flex-align-center">
+                    <div class="list-pic flex flex-align-center">
+                        <div class="icon6 icon">
+                        </div>
+                    </div>
+                    <input class="name" type="text" name="preferentialCode" id="preferentialCode"
+                           placeholder="注册优惠码，若没有可不填"/>
+                </div>
+                <div id="error-msg" class="text-center" style="display: none;">
+                    公司名称已存在！
+                </div>
+                <button class="text-center register " id="registeredButton" type="button" style="display: inherit;">
+                    注册
+                </button>
+                <div class="kong"></div>
+                <div class="copyright">
+                    <span>Copyright © 2016  上海利唐信息科技有限公司 版权所有</span>
+                 </div>    
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/appHttp.js"></script>
+<script src="js/register.js"></script>
+<script>
+    var referUrl = document.referrer;
+    console.log(referUrl);
+</script>
+</html>
